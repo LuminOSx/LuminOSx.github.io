@@ -1,52 +1,108 @@
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml">
-    <title>LuminOS - focus on what matters</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
+  <title>Luminus | focus on what matters</title>
 </head>
 <body>
-    <header class="bg-gray-800" x-data="{ isOpen: false }">
-    <div class="relative bg-teal-500 p-6 space-y-5">
-        <ul class="absolute inset-0 flex items-center justify-center">
-            <li><a href="https://github.com/LuminOSx" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-blue-600 px-3 py-2 text-sm font-medium">GitHub</a></li>
-            <li><a href="#support" class="text-gray-300 hover:text-blue-600 px-3 py-2 text-sm font-medium">Support</a></li>
-            <li><a href="https://discord.gg/eVmXsqkvkw" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-blue-600 px-3 py-2 text-sm font-medium">Discord</a></li>
-        </ul>
-    </div>
-    <div class="relative">
-        <div class="text-center p-5">
-            <a href="/">
-                <svg class="fill-current text-blue-500 inline-block h-16 w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7868.04 7868.04">
-                    <path d="M2128.53 7868.04c-456.65,0 -828.35,-58.05 -1115.09,-175.45 -288.25,-117.4 -515.82,-304.72 -684.22,-561.95 -121.37,-183.36 -206.33,-418.16 -256.39,-704.41 -48.55,-284.93 -72.83,-767.74 -72.83,-1448.41l0 -3204.16 1620.3 0 0 3730.49c0,563.27 40.96,912.84 122.88,1047.39 80.42,133.23 224.54,200.51 432.38,200.51 177.74,0 308.06,-49.67 392.78,-148.21l0 -6603.85 2112.91 0 0 6263.04 2533.1 0c0,535 0,1070 0,1605l-5085.82 0zm3769.32 -7232.06l1336.18 0c348.7,0 634.01,285.3 634.01,634.01l0 996.31c0,348.71 -285.31,634.01 -634.01,634.01l-1970.19 0 0 -1630.32c0,-348.71 285.3,-634.01 634.01,-634.01z"></path>
-                </svg>
-            </a>
-            <br>
-            <p class="p-5 text-xl font-medium tracking-wider text-gray-300">
-                The best way to focus on what matters...
-            </p>
-            <img class="mx-auto w-200" src="/images/preview.png" alt="Preview Image">
-            <br>
-            <div class="p-5">
-                <a href="https://github.com/LuminOSx/makeiso/releases/latest" class="bg-blue-500 border-blue-500 hover:bg-blue-900 text-white font-bold ml-3 py-2 px-4 border rounded">
-                    Download Now
-                </a>
-                <a href="#features" class="hover:bg-blue-900 text-white font-bold ml-3 py-2 px-4 border rounded">
-                    Learn more
-                </a>
-            </div>
+  <header class="bg-white">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Luminus</span>
+          <img class="h-8 w-auto" src="img/logos/brand.svg" alt="">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Overview</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Get Involved</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 bg-red-600 text-white rounded-full px-3 py-1 transform -translate-y-1">
+          Support Us
+          <i class="fas fa-heart ml-2"></i>
+        </a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end group">
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
+          Language
+          <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="absolute mt-2 w-48 py-2 bg-white shadow-lg rounded-md hidden group-hover:block z-10">
+          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Portuguese</a>
         </div>
+      </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="lg:hidden" role="dialog" aria-modal="true">
+      <!-- Background backdrop, show/hide based on slide-over state. -->
+      <div class="fixed inset-0 z-10"></div>
+      <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Luminus</span>
+            <img class="h-8 w-auto" src="img/logos/brand.svg" alt="">
+          </a>
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                Overview
+              </a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                Get Involved
+              </a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                Support Us
+                <i class="fas fa-heart ml-2 text-red-600"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    <div class="relative">
+      <div class="text-center p-5">
+        <img class="mx-auto w-200" src="/img/preview.png" alt="Preview Image">
+        <br>
+        <p class="p-5 text-xl font-medium tracking-wider text-gray-700">
+          The best way to focus on what matters...
+        </p>
+        <div class="p-5">
+          <a href="https://github.com/LuminusOS/mkluminus/releases/latest" class="bg-blue-500 border-blue-500 hover:bg-blue-900 text-white font-bold ml-3 py-4 px-6 border rounded">
+            Download Now
+            <i class="fas fa-download ml-2"></i>
+          </a>
+        </div>
+      </div>
     </div>
     </header>
     <div class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
             <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase" id="features">Features</h2>
-            <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                LuminOS is an accessible and open source operating system suitable for beginners and experienced computer users.
+            <p class="mt-4 max-w-2xl text-xl text-gray-700 lg:mx-auto">
+                Luminus is an accessible and open source operating system suitable for beginners and experienced computer users.
             </p>
             </div>
         
